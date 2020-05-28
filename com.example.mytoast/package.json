@@ -1,0 +1,16 @@
+{
+  "name": "com.example.mytoast",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "com.example.mytoast",
+    "platforms": [
+        "ios","android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "",
+  "license": "ISC"
+}

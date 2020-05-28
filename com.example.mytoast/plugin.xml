@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.example.mytoast" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>mytoast</name>
+    <js-module name="mytoast" src="www/mytoast.js">
+        <clobbers target="cordova.plugins.mytoast" />
+    </js-module>
+    
+    <platform name="ios">
+        <source-file src="src/ios/AlertPlugin.m" />
+        <header-file src="src/ios/AlertPlugin.h" />
+        
+        <config-file target="config.xml" parent="/widget">
+            
+            <feature name="mytoast">
+                <param name="ios-package" value="AlertPlugin" />
+            </feature>
+        </config-file>
+    </platform>
+    
+    
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="mytoast">
+                <param name="android-package" value="com.example.mytoast.mytoast"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/mytoast.java" target-dir="src/com/example/mytoast/mytoast"/>
+    </platform>
+</plugin>
